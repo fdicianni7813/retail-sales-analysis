@@ -1,16 +1,16 @@
-# Retail Sales Analysis
+# 📊 Retail Sales Analysis
 
-## Project Overview
+## 🧾 Project Overview
 
 This project simulates a real-world retail sales and inventory analysis workflow for a small food and beverage business.
 
-The goal of the project is to analyze sales performance, product profitability, inventory levels, and business trends using Python and data analysis libraries.
+The main objective is to analyze sales performance, product profitability, inventory levels, and business trends using Python and data analysis libraries.
 
 The project was designed as a portfolio case study for a Junior Data Analyst profile.
 
 ---
 
-## Objectives
+## 🎯 Objectives
 
 * Perform data cleaning and preprocessing
 * Analyze sales and inventory performance
@@ -22,7 +22,7 @@ The project was designed as a portfolio case study for a Junior Data Analyst pro
 
 ---
 
-## Technologies Used
+## 🛠 Technologies Used
 
 * Python
 * Pandas
@@ -33,7 +33,7 @@ The project was designed as a portfolio case study for a Junior Data Analyst pro
 
 ---
 
-## Dataset Features
+## 📦 Dataset Features
 
 The dataset includes simulated retail transaction data such as:
 
@@ -52,7 +52,7 @@ The project uses realistic retail food products with different pricing ranges an
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 retail-sales-analysis/
@@ -75,7 +75,7 @@ retail-sales-analysis/
 
 ---
 
-## Data Cleaning Process
+## 🧹 Data Cleaning Process
 
 The cleaning phase included:
 
@@ -88,7 +88,7 @@ The cleaned dataset was exported separately from the raw dataset to simulate a p
 
 ---
 
-## Exploratory Data Analysis
+## 📈 Exploratory Data Analysis
 
 The analysis focused on:
 
@@ -99,7 +99,7 @@ The analysis focused on:
 
 ---
 
-## Key Insights
+## 💡 Key Insights
 
 * Premium wine products generated high overall profit margins.
 * Frequently purchased low-cost products contributed strongly to sales volume.
@@ -108,7 +108,7 @@ The analysis focused on:
 
 ---
 
-## Sample Visualizations
+## 🖼 Sample Visualizations
 
 ### Top Selling Products
 
@@ -124,7 +124,7 @@ The analysis focused on:
 
 ---
 
-## Future Improvements
+## 🚀 Future Improvements
 
 Possible future improvements include:
 
@@ -136,8 +136,8 @@ Possible future improvements include:
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-Francesco Di Cianni
+**Francesco Di Cianni**
 
 University student in Digital Business Informatics with a strong interest in Data Analysis, Artificial Intelligence, and business-oriented technology solutions.
