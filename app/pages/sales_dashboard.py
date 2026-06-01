@@ -4,6 +4,7 @@ import plotly.express as px
 
 from utils.data_loader import load_data
 from components.filters import apply_filters
+from components.kpi_cards import display_kpi_cards
 
 
 # =========================
@@ -44,32 +45,28 @@ average_order_value = (
     total_revenue / total_orders
 )
 
-# Create KPI columns
-col1, col2, col3, col4 = st.columns(4)
-
-# KPI cards
-col1.metric(
-    "💰 Total Revenue",
-    f"€{total_revenue:,.2f}"
+display_kpi_cards(
+    total_revenue,
+    total_profit,
+    total_orders,
+    average_order_value
 )
 
-col2.metric(
-    "📈 Total Profit",
-    f"€{total_profit:,.2f}"
-)
+# =========================
+# BUSINESS INSIGHT MESSAGE
+# =========================
 
-col3.metric(
-    "🧾 Total Orders",
-    total_orders
-)
+if total_profit > 15000:
 
-col4.metric(
-    "🛒 Avg Order Value",
-    f"€{average_order_value:,.2f}"
-)
+    st.success(
+        "📈 Business performance is strong with high profitability."
+    )
 
-st.divider()
+else:
 
+    st.warning(
+        "⚠️ Profitability could be improved."
+    )
 
 # =========================
 # TOP PRODUCTS CHART
@@ -88,7 +85,9 @@ fig_top_products = px.bar(
     top_products,
     x="product_name",
     y="quantity_sold",
-    title="Top Selling Products"
+    title="Top Selling Products",
+    color="quantity_sold",
+    template="plotly_dark"
 )
 
 st.plotly_chart(
@@ -114,7 +113,8 @@ fig_category_profit = px.bar(
     category_profit,
     x="category",
     y="profit",
-    title="Profit by Category"
+    title="Profit by Category",
+    template="plotly_dark"
 )
 
 st.plotly_chart(
@@ -149,7 +149,8 @@ fig_monthly_profit = px.line(
     monthly_profit,
     x="month",
     y="profit",
-    title="Monthly Profit Trend"
+    title="Monthly Profit Trend",
+    template="plotly_dark"
 )
 
 st.plotly_chart(

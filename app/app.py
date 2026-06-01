@@ -1,25 +1,45 @@
 import streamlit as st
 
-# Page configuration
 st.set_page_config(
-    page_title="Retail Business Dashboard",
+    page_title="Retail Business Intelligence",
     page_icon="📊",
     layout="wide"
 )
 
-# Main title
-st.title("📊 Retail Business Dashboard")
+st.title("📊 Retail Business Intelligence Dashboard")
 
-# Introduction
 st.markdown("""
-Welcome to the Retail Sales & Inventory Analysis Dashboard.
+Welcome to the Retail Business Intelligence Platform.
 
-This application provides business insights related to:
-- Sales performance
-- Product profitability
-- Inventory monitoring
-- Trend analysis
+This application provides:
+
+- 📈 Sales analytics
+- 📦 Inventory monitoring
+- 💰 Profitability analysis
+- 📤 CSV upload analysis
+- 📊 Interactive business insights
 """)
 
-# Sidebar
-st.sidebar.success("Select a page above.")
+st.divider()
+
+st.subheader("🚀 Platform Features")
+
+col1, col2, col3 = st.columns(3)
+
+col1.info(
+    "Analyze sales performance and profitability trends."
+)
+
+col2.info(
+    "Monitor inventory and detect low-stock products."
+)
+
+col3.info(
+    "Upload custom CSV datasets for quick analysis."
+)
+
+st.divider()
+
+st.success(
+    "Use the sidebar to navigate through dashboard pages."
+)
