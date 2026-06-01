@@ -3,30 +3,51 @@ import pandas as pd
 import plotly.express as px
 
 from utils.data_loader import load_data
+from components.filters import apply_filters
 
-# Load dataset
+
+# =========================
+# LOAD DATA
+# =========================
+
 df = load_data()
 
-# Page title
+# Apply sidebar filters
+filtered_df = apply_filters(df)
+
+
+# =========================
+# PAGE TITLE
+# =========================
+
 st.title("📈 Sales Dashboard")
+
 
 # =========================
 # KPI SECTION
 # =========================
 
 total_revenue = (
-    df["price"] * df["quantity_sold"]
+    filtered_df["price"]
+    * filtered_df["quantity_sold"]
 ).sum()
 
-total_profit = df["profit"].sum()
+total_profit = (
+    filtered_df["profit"]
+).sum()
 
-total_orders = df["order_id"].nunique()
+total_orders = (
+    filtered_df["order_id"]
+).nunique()
 
-average_order_value = total_revenue / total_orders
+average_order_value = (
+    total_revenue / total_orders
+)
 
-# KPI cards
+# Create KPI columns
 col1, col2, col3, col4 = st.columns(4)
 
+# KPI cards
 col1.metric(
     "💰 Total Revenue",
     f"€{total_revenue:,.2f}"
@@ -49,12 +70,14 @@ col4.metric(
 
 st.divider()
 
+
 # =========================
-# TOP PRODUCTS
+# TOP PRODUCTS CHART
 # =========================
 
 top_products = (
-    df.groupby("product_name")["quantity_sold"]
+    filtered_df.groupby("product_name")
+    ["quantity_sold"]
     .sum()
     .sort_values(ascending=False)
     .head(10)
@@ -68,14 +91,21 @@ fig_top_products = px.bar(
     title="Top Selling Products"
 )
 
-st.plotly_chart(fig_top_products, use_container_width=True)
+st.plotly_chart(
+    fig_top_products,
+    use_container_width=True
+)
+
+st.divider()
+
 
 # =========================
 # PROFIT BY CATEGORY
 # =========================
 
 category_profit = (
-    df.groupby("category")["profit"]
+    filtered_df.groupby("category")
+    ["profit"]
     .sum()
     .reset_index()
 )
@@ -87,18 +117,30 @@ fig_category_profit = px.bar(
     title="Profit by Category"
 )
 
-st.plotly_chart(fig_category_profit, use_container_width=True)
+st.plotly_chart(
+    fig_category_profit,
+    use_container_width=True
+)
+
+st.divider()
+
 
 # =========================
 # MONTHLY PROFIT TREND
 # =========================
 
-df["order_date"] = pd.to_datetime(df["order_date"])
+filtered_df["order_date"] = pd.to_datetime(
+    filtered_df["order_date"]
+)
 
-df["month"] = df["order_date"].dt.month
+filtered_df["month"] = (
+    filtered_df["order_date"]
+    .dt.month
+)
 
 monthly_profit = (
-    df.groupby("month")["profit"]
+    filtered_df.groupby("month")
+    ["profit"]
     .sum()
     .reset_index()
 )
@@ -110,4 +152,7 @@ fig_monthly_profit = px.line(
     title="Monthly Profit Trend"
 )
 
-st.plotly_chart(fig_monthly_profit, use_container_width=True)
+st.plotly_chart(
+    fig_monthly_profit,
+    use_container_width=True
+)
