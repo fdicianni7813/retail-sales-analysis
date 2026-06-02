@@ -79,7 +79,6 @@ retail-sales-analysis/
 │   │   ├── inventory_analysis.py
 │   │   └── upload_analysis.py
 │   ├── components/
-│   │   ├── charts.py
 │   │   ├── filters.py
 │   │   └── kpi_cards.py
 │   └── utils/
@@ -94,7 +93,7 @@ retail-sales-analysis/
 │   ├── 02_data_cleaning.ipynb
 │   └── 03_exploratory_data_analysis.ipynb
 │
-├── visuals/
+├── screenshot/
 │
 ├── requirements.txt
 ├── README.md

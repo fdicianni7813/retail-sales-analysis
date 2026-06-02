@@ -28,6 +28,8 @@ if uploaded_file is not None:
 
     st.success("✅ File uploaded successfully!")
 
+    st.balloons()
+
     st.divider()
 
     # =========================

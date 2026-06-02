@@ -3,7 +3,8 @@ import streamlit as st
 st.set_page_config(
     page_title="Retail Business Intelligence",
     page_icon="📊",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 st.title("📊 Retail Business Intelligence Dashboard")
@@ -36,10 +37,4 @@ col2.info(
 
 col3.info(
     "Upload custom CSV datasets for quick analysis."
-)
-
-st.divider()
-
-st.success(
-    "Use the sidebar to navigate through dashboard pages."
 )
