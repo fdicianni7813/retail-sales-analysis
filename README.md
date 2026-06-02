@@ -6,6 +6,10 @@
 [![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75)]()
 [![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717)]()
 
+## 🌐 Live Demo
+
+[Launch Retail Dashboard](https://retail-sales-analysis-fdc7813.streamlit.app/)
+
 An interactive retail analytics project built to simulate a real-world sales and inventory workflow for a small food and beverage business.
 
 The project combines **data generation**, **data cleaning**, **exploratory analysis**, and a **Streamlit dashboard** to show how a Junior Data Analyst can transform raw business data into usable insights.
