@@ -73,14 +73,17 @@ The Streamlit application includes:
 retail-sales-analysis/
 │
 ├── app/
-│   ├── app.py
+│   ├── 0_🏠_Home.py
+│   │
 │   ├── pages/
-│   │   ├── sales_dashboard.py
-│   │   ├── inventory_analysis.py
-│   │   └── upload_analysis.py
+│   │   ├── 1_📦_Inventory_Analysis.py
+│   │   ├── 2_📈_Sales_Dashboard.py
+│   │   └── 3_📤_Upload_Analysis.py
+│   │
 │   ├── components/
 │   │   ├── filters.py
 │   │   └── kpi_cards.py
+│   │
 │   └── utils/
 │       └── data_loader.py
 │
@@ -93,7 +96,7 @@ retail-sales-analysis/
 │   ├── 02_data_cleaning.ipynb
 │   └── 03_exploratory_data_analysis.ipynb
 │
-├── screenshot/
+├── screenshots/
 │
 ├── requirements.txt
 ├── README.md
@@ -232,7 +235,7 @@ pip install -r requirements.txt
 ### 4. Run the Streamlit dashboard
 
 ```bash
-streamlit run app/app.py
+streamlit run app/0_🏠_Home.py
 ```
 
 ### 5. Explore the notebooks
