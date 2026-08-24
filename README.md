@@ -1,10 +1,10 @@
 # 📊 Retail Business Intelligence Dashboard
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)]()
-[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458)]()
-[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B)]()
-[![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75)]()
-[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717)]()
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75)
+![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717)
 
 ## 🌐 Live Demo
 
@@ -27,7 +27,7 @@ This project was designed as a portfolio case study focused on a realistic retai
 * monthly trend analysis
 * CSV upload analysis for external datasets
 
-The goal was not to build a flashy toy dashboard. The goal was to build something that looks and behaves like a real business analytics tool, because apparently humans enjoy pretending spreadsheets are destiny.
+The goal was not to build a flashy toy dashboard, but something that looks and behaves like a real business analytics tool.
 
 ---
 
@@ -219,7 +219,7 @@ The cleaned data is displayed inside an interactive dashboard for easier navigat
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/retail-sales-analysis.git
+git clone https://github.com/fdicianni7813/retail-sales-analysis.git
 cd retail-sales-analysis
 ```
 
@@ -258,7 +258,7 @@ This project helped me practice:
 * building dashboards with Streamlit
 * creating reusable components
 * using Plotly for interactive charts
-* organizing a GitHub portfolio like an actual developer would, which is apparently rare enough to be a skill
+* organizing a GitHub portfolio with a clear, reproducible project structure
 
 ---
 
@@ -266,7 +266,6 @@ This project helped me practice:
 
 Possible next steps for the project:
 
-* deploy the dashboard online with a cloud service
 * add more advanced KPI sections
 * introduce forecasting logic for sales trends
 * improve inventory risk scoring
@@ -274,6 +273,18 @@ Possible next steps for the project:
 * integrate SQL for storage and querying
 
 ---
+
+---
+
+## 🔗 Related Projects
+
+This project is one stage of a three-part retail analytics portfolio built on the same business dataset.
+
+| Project | Stack | Focus |
+| --- | --- | --- |
+| **Retail Business Intelligence Dashboard** *(this repository)* | Python, Pandas, Streamlit, Plotly | Data generation, cleaning, EDA and an interactive dashboard |
+| [**Retail SQL Analytics**](https://github.com/fdicianni7813/retail-sql-analytics) | SQLite, SQL | Sales, inventory and customer analysis through analytical queries |
+| [**Retail Power BI Dashboard**](https://github.com/fdicianni7813/retail-powerbi-dashboard) | Power BI, DAX, Power Query | Star schema data model, KPI design and a four-page report |
 
 ## 👨‍💻 Author
 
@@ -287,5 +298,5 @@ Junior Data Analyst / AI & Operations oriented profile, with a strong interest i
 
 This project was built to be understandable, realistic, and presentable in a professional portfolio. It focuses on business logic, data quality, and useful analytics rather than unnecessary complexity.
 
-That is usually what recruiters actually care about, despite the internet’s obsession with making every project sound like an apocalypse-proof AI moonshot.
+The focus is on business logic, data quality, and analytics someone could actually act on.
 
